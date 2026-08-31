@@ -15,3 +15,23 @@ Example Problems from Grokking the Coding Interview
     1. Pair with Target Sum: Find a pair in an array that adds up to a specific target sum.
     2. Triplet Sum to Zero: Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
 '''
+
+# Pair with Target Sum: Find a pair in an array that adds up to a specific target sum.
+def target_sum(nums, target):
+    nums.sort()
+    l = 0
+    r = len(nums) - 1
+    while(l < r):
+        current_sum = nums[l] + nums[r]
+        if(current_sum == target):
+            return [l, r]
+        elif(current_sum < target):
+            l += 1
+        else: 
+            r -= 1
+    return [-1, -1]            
+
+print(target_sum([1, 4, 7, 9, 4], 8))     
+
+
+# Triplet Sum to Zero: Given an array of unsorted numbers, find all unique triplets in it that add up to zero.

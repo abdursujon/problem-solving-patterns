@@ -39,7 +39,6 @@ class SlidingWindow:
         current_window_sum = sum(arr[:k])
         max_sum = current_window_sum 
         
-
         # Sliding window 
         for i in range(k, len(arr)):
             # deduct value of first index and add value of next index arr[i]
@@ -51,13 +50,31 @@ class SlidingWindow:
     
     '''
     Slinding Window where window size is dynamic 
-    Fruits Into Baskets: Given an array of characters where each character represents a fruit tree, you are given two baskets,
-    and your goal is to put maximum number of fruits in each basket.
+    Longest Substring Without Repeating Characters
     '''
+    def longestSubstring(self, s):
+        seen = set()
+        left = 0
+        max_len = 0
+
+        for right in range(len(s)): 
+            c = s[right]
+            
+            #if duplicate char found remove from left 
+            while(c in seen): 
+                seen.remove(s[left])
+                left += 1
+            
+            seen.add(c)
+
+            max_len = max(max_len, right - left + 1)
+        
+        return max_len 
 
 def main(): 
     sw = SlidingWindow()
     print(sw.max_sum_of_subarray([1, 3, 4, 55, 66, 2, 34], 3))
+    print(sw.longestSubstring("abcabcbb"))
 
 main()
 

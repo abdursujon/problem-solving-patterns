@@ -6,6 +6,9 @@ By knowing this patterns we will be able to identify what approach we need by re
 - Type this command in your terminal: git clone https://github.com/abdursujon/problem-solving-patterns.git
 - Open the folder in vscode or whatever IDE you prefer. 
 
+# How to get update that are made on the repository 
+- Type command: git pull origin main
+
 ## Pattern Covered 
 - Two Pointers x
 - Fast And Slow Pointers x

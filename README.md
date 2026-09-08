@@ -1,14 +1,33 @@
-- Fundamental
-- DS
-- Final Year Project Proposal and plan
-- Problem solving patterns
-- Python Project
-- Fix all portfolio project 
-- Fix portfolio 
-- Fix CV
-- Apply for jobs in AI and full stack
-- Deep learning (In depth) with as many project as possible
-- Game development with a decent project
-- Get a junior job by a year after graduation
+# Problem Solving Patterns 
+This project designed to familiarise us with problem solving patterns that are common in interviews and in general will allow us become a better programmer. 
+By knowing this patterns we will be able to identify what approach we need by reading the question. 
 
+# How to get the repository 
+Type this command: 
+bash
+'''git clone https://github.com/abdursujon/problem-solving-patterns.git
 
+## Pattern Covered 
+- Two Pointers x
+- Fast And Slow Pointers x
+- Sliding Window x
+- Binary Search x
+- Modified Binary Search
+- In Place Reversal Linked List
+- Build Dictionary and 2 example how to use dict to solve problems 
+- Build Set and 2 example how to use dict to solve problems 
+- Tree Breadth First Search
+- Tree Depth First Search
+- Trie
+- Merge Intervals
+- Cyclic Sort
+- Matrix Traversal
+- K Way Merge
+- Monotonic Stack
+- Topological Sort
+- Backtracking
+- Subsets
+- Knapsack
+- Bitwise XOR
+- Two Heaps
+- Top K Elements

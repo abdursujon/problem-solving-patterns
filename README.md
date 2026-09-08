@@ -2,10 +2,9 @@
 This project designed to familiarise us with problem solving patterns that are common in interviews and in general will allow us become a better programmer. 
 By knowing this patterns we will be able to identify what approach we need by reading the question. 
 
-# How to get the repository 
-Type this command: 
-bash
-'''git clone https://github.com/abdursujon/problem-solving-patterns.git
+# How to get the repository and use it
+- Type this command in your terminal: git clone https://github.com/abdursujon/problem-solving-patterns.git
+- Open the folder in vscode or whatever IDE you prefer. 
 
 ## Pattern Covered 
 - Two Pointers x

@@ -14,8 +14,8 @@ By knowing this patterns we will be able to identify what approach we need by re
 - Fast And Slow Pointers x
 - Sliding Window x
 - Binary Search x
-- Modified Binary Search
-- In Place Reversal Linked List
+- Modified Binary Search x
+- In Place Reversal Linked List x
 - Build Dictionary and 2 example how to use dict to solve problems 
 - Build Set and 2 example how to use dict to solve problems 
 - Tree Breadth First Search

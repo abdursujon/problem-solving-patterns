@@ -16,3 +16,33 @@ Example Problems from Grokking the Coding Interview
     2. Reverse Level Order Traversal: Traverse a tree in reverse level order.
     3. Zigzag Traversal: Traverse a tree in a zigzag order.
 '''
+graph = {
+    'A' : ['B', 'G'],
+    'B' : ['C' , 'D', 'E'],
+    'C' : [], 
+    'D' : [],
+    'E' : ['F'],
+    'F' : [],
+    'G' : ['H'],
+    'H' : ['I'],
+    'I' : []
+} 
+
+def depth_first_search(graph, start):
+    """Iterative DFS, returns nodes in preorder (root-left-right). Graph is a dictionary, where "key" is a string and each key has a list maped to it."""
+    visited = {start} # set to track visited nodes 
+    stack = [start] # list to push and pop nodes (list can work as a stack)
+    order = [] # a list to store how nodes were visited 
+
+    while stack: 
+        s = stack.pop()
+        order.append(s)
+        for n in reversed(graph[s]):
+            # explore a node if it's note visited already otherwise ignore 
+            if n not in visited:
+                visited.add(n)
+                stack.append(n)
+    return order
+
+assert depth_first_search(graph, 'A') == list('ABCDEFGHI')   
+print(depth_first_search(graph, 'A'))

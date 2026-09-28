@@ -1,25 +1,29 @@
-# Problem Solving Patterns 
-This project designed to familiarise us with problem solving patterns that are common in interviews and in general will allow us become a better programmer. 
-By knowing this patterns we will be able to identify what approach we need by reading the question. 
+# Problem Solving Patterns
+A collection of common problem solving patterns used in coding interviews, written in Python. Each pattern has an explanation (usage, pros and cons, typical problems) and, where available, a working implementation plus solved LeetCode problems. Knowing these patterns makes it easier to recognise which approach a question needs just by reading it.
 
-# How to get the repository and use it
-- Type this command in your terminal: git clone https://github.com/abdursujon/problem-solving-patterns.git
-- Open the folder in vscode or whatever IDE you prefer. 
+## Getting started
+```bash
+git clone https://github.com/abdursujon/problem-solving-patterns.git
+cd problem-solving-patterns
+python3 src/sliding_window/sliding_window_leetcode.py   # run any file directly
+```
 
-# How to get update that are made on the repository 
-- Type command: git pull origin main
+To get the latest changes:
+```bash
+git pull origin main
+```
 
-## Pattern Covered 
-- Two Pointers x
-- Fast And Slow Pointers x
-- Sliding Window x
-- Binary Search x
-- Modified Binary Search x
-- In Place Reversal Linked List x
-- Build Dictionary and 2 example how to use dict to solve problems 
-- Build Set and 2 example how to use dict to solve problems 
+## Patterns To Be Implemented 
+- Two Pointers ✅
+- Fast And Slow Pointers ✅
+- Sliding Window ✅
+- Binary Search ✅
+- Modified Binary Search ✅
+- In Place Reversal Linked List ✅
+- Build Dictionary ✅
+- Build Set
+- Tree Depth First Search ✅
 - Tree Breadth First Search
-- Tree Depth First Search
 - Trie
 - Merge Intervals
 - Cyclic Sort

@@ -4,14 +4,18 @@ It involves maintaining three pointers: prev, current, and next, updating the cu
 until the list is fully reversed
 '''
 
+
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next 
 
 # Trace through {1 > 2 > 3 > None} for clarity 
-def in_place_reversal_linked_list(head: ListNode) -> ListNode:
-    prev = None 
+def in_place_reversal_linked_list(head:Optional[ListNode]) -> Optional[ListNode]:
+    prev: Optional[ListNode] = None 
     curr = head 
 
     while curr: 

@@ -12,28 +12,85 @@ To get the latest changes:
 ```bash
 git pull origin main
 ```
+## Patterns Covered (Including Leetcode Problems and Solutions) 
 
-## Patterns To Be Implemented 
-- Two Pointers ✅
-- Fast And Slow Pointers ✅
-- Sliding Window ✅
-- Binary Search ✅
-- Modified Binary Search ✅
-- In Place Reversal Linked List ✅
-- Build Dictionary ✅
-- Build Set
+#### Hashing 
+
+- How to build a dictionary from scratch ✅
+
+- How to build a set from scratch 
+
+
+
+
+#### LinkedList 
+
+- How to build a LinkedList from scratch 
+
+- In-place reversal of LinkedList ✅
+
+
+
+
+#### Two pointers 
+
+- Two Pointers template ✅
+
+- Fast and Slow Pointers template ✅
+
+
+
+
+#### Sliding Window 
+
+- Sliding Window Template ✅
+
+
+
+
+#### Searching 
+
+- Binary Search Template ✅
+
+- Modified binary search and how to modify it to solve LeetCode 
+
 - Tree Depth First Search ✅
-- Tree Breadth First Search
-- Trie
-- Merge Intervals
+
+- Tree Breadth First Search ✅
+
+
+
+
+#### Merge Patterns 
+
+- Merge Intervals 
+
+- K Way Merge 
+
+
+
+
+#### Sorting 
+
 - Cyclic Sort
-- Matrix Traversal
-- K Way Merge
-- Monotonic Stack
+
 - Topological Sort
-- Backtracking
-- Subsets
-- Knapsack
-- Bitwise XOR
-- Two Heaps
-- Top K Elements
+
+
+
+
+#### Matrix Traversal
+
+#### Monotonic Stack
+
+#### Backtracking
+
+#### Subsets
+
+#### Knapsack
+
+#### Bitwise XOR
+
+#### Two Heaps
+
+#### Top K Elements

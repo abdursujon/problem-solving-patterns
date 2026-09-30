@@ -21,8 +21,6 @@ git pull origin main
 - How to build a set from scratch 
 
 
-
-
 #### LinkedList 
 
 - How to build a LinkedList from scratch 
@@ -30,14 +28,11 @@ git pull origin main
 - In-place reversal of LinkedList ✅
 
 
-
-
 #### Two pointers 
 
 - Two Pointers template ✅
 
 - Fast and Slow Pointers template ✅
-
 
 
 
@@ -52,7 +47,7 @@ git pull origin main
 
 - Binary Search Template ✅
 
-- Modified binary search and how to modify it to solve LeetCode 
+- Modified binary search and how to modify it to solve LeetCode ✅
 
 - Tree Depth First Search ✅
 
@@ -64,7 +59,7 @@ git pull origin main
 #### Merge Patterns 
 
 - Merge Intervals 
-
+![Merge Intervals](resource/merge_intervals.png)
 - K Way Merge 
 
 

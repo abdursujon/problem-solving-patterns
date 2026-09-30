@@ -1,3 +1,3 @@
 '''
-Build set from scratch and how to solve problem using dictionary
+Build set from scratch and how to solve problem using set
 '''

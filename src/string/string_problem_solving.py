@@ -90,5 +90,3 @@ class StringProblemSolving:
     '''
     Problem 10:
     '''
-    Problem 5:
-    '''

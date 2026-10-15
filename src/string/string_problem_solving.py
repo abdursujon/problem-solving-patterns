@@ -28,11 +28,19 @@ class StringProblemSolving:
 
     '''
     Problem 3:
-    You are given two strings s and t, return true if s is a subsequence of t, or false otherwise.
-    A subsequence of a string is a new string that is formed from the original string by deleting 
-    some (can be none) of the characters without disturbing the relative positions of the remaining 
-    characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+    You are given an array of strings strs. Return the longest common prefix of all the strings.
+    If there is no longest common prefix, return an empty string "".
+    Example 1:
+    Input: strs = ["bat","bag","bank","band"]
+    Output: "ba"
     '''
+    def longestCommonPrefix(self, strs: list[str]) -> str:
+        smallest = min(strs, key=len)
+        for i in range(len(smallest)):
+            for s in strs:
+                if s[i] != smallest[i]:
+                    return smallest[:i]
+        return smallest
 
     '''
     Problem 4:

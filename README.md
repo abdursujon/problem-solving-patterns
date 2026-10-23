@@ -28,11 +28,10 @@ Each file isolates **one problem-solving pattern** so we can learn the patterns 
 21. Cyclic Sort
 22. Bitwise XOR
 
-## Technique to solve an unknow problem 
-> R2PSDIT 
-- R2: Read the question twice 
-- P: Recognise the pattern 
-- S: Write sudo code 
-- D: Think about the data structure needed 
-- I: Implementation 
-- T: Test the implementation
+## How to Approach a Problem in an Interview 
+1. Read the question two times including example case, and ask clarifying question to the interviewer
+2. Recognise the pattern and talk to the interviewer about different approach and write down sudo code when needed and clarify why you think a certain data staructure works for the given problem.
+3. Approximate the complexity and write down the guess
+4. Code the solution and make sure the code is readable 
+5. Restate the complexity and if the complexity changed explain why
+6. Test the code with sample examples  

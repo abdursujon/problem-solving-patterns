@@ -74,6 +74,18 @@ Leetcode:
 
 # ===== Inward traversal =====
 # 344. Reverse String
+def reverseString(self, s: list[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        left=0
+        right= len(s) -1
+        while left < right:
+            temp = s[left]
+            s[left]=s[right]
+            s[right] = temp
+            left+=1
+            right-=
 # 125. Valid Palindrome
 # 680. Valid Palindrome II
 # 345. Reverse Vowels of a String

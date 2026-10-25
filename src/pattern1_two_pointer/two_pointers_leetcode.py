@@ -69,8 +69,89 @@ def isPalindromic(self, s: str) -> bool:
 
 # --- Medium ---
 # 167. Two Sum II - Input Array Is Sorted
+def twoSum(self, numbers: list[int], target: int) -> list[int]:
+    left = 0
+    right = len(numbers) - 1
+    while left < right:
+        curr = numbers[left] + numbers[right]
+        if curr == target:
+            return [left+1, right+1]
+        elif curr > target:
+            right -= 1
+        else:
+            left += 1
+    return [-1, -1]
+
 # 11. Container With Most Water
+def maxArea(self, height: list[int]) -> int:
+    # to calculate the max water, the rule is 
+    # min(left_h_value, right_h_value) * (right - left) 
+    # first bit before * takes the smaller vertical line,
+    # second section after * figure out the width 
+    left = 0
+    right = len(height) - 1
+    max_water = 0
+    while left < right:
+        curr_water_amount = min(height[left], height[right]) * (right - left)
+        max_water = max(curr_water_amount, max_water)
+        # this section fo if else traverse through the entire array by moving left and right if left is smaller 
+        # then right, it move one step forward, and if left is greater than right, moves right to smaller value if equal both pointer moves
+        if height[left] < height[right]:
+            left += 1
+        elif height[left] > height[right]:
+            right -= 1
+        else:
+            left+=1
+            right-=1
+    return max_water 
+
+
 # 881. Boats to Save People
+def numRescueBoats(self, people: list[int], limit: int) -> int:
+    if len(people) == 1 and people[0] < limit:
+        return 1
+    
+    outlier = []
+    average = []
+
+    for p in people:
+        if p > limit:
+            continue
+        if p == limit:
+            outlier.append(p)
+        if p != limit:
+            average.append(p)
+    
+    count = len(outlier)
+    
+    
+    left, right = 0, len(average) - 1
+    while left < right:
+        if average[left] + average[right] == limit:
+            count = count + 1
+            left += 1
+            right -= 1
+        
+        elif average[left] + average[right] > limit and average[left] > average[right]:
+            left+=1
+            count+=1
+        
+        elif average[left] + average[right] > limit and average[right] > average[left]:
+            right-=1
+            count+=1
+        
+        else:
+            left+=1
+            right-=1
+            count+=1
+        
+    odd = False
+    if len(average) % 2 != 0:
+        odd = True
+    if odd:
+        count += 1
+    
+    return count
 
 # ===== Unidirectional traversal =====
 # --- Easy ---

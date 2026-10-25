@@ -151,8 +151,8 @@ def largest_container(heights: List[int]) -> int:
     max_water = 0
 
     while (left < right):
-        curr =  min(heights[left], heights[right]) * (right - left)
-        max_water = max(max_water, curr)
+        water =  min(heights[left], heights[right]) * (right - left)
+        max_water = max(max_water, water)
         if heights[left] < heights[right]:
             left += 1
         elif heights[left] > heights[right]:

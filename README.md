@@ -37,4 +37,4 @@ This project will allow you to explore different patterns quickly before the int
 
 5. Restate the complexity, and if the complexity changed, explain why.
 
-6. Test the code with sample examples   
+6. Test the code with sample examples.

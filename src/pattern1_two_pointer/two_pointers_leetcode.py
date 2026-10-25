@@ -45,6 +45,27 @@ def validPalindrome(self, s: str) -> bool:
                 left+=1
                 right-=1
         return True
+    
+# 4030. Check ASCII Palindromic
+def isPalindromic(self, s: str) -> bool:
+    char_int = []
+    for ch in s:
+        char_int.append(ord(ch))
+    binary = []
+    for n in char_int:
+        d = format(n, '08b')
+        binary.append(d)
+    binary_string = ''.join(binary)
+    
+    left = 0
+    right = len(binary_string) - 1
+    while left < right:
+        if binary_string[left] != binary_string[right]:
+            return False
+        else:
+            left+=1
+            right-=1
+    return True
 
 # --- Medium ---
 # 167. Two Sum II - Input Array Is Sorted

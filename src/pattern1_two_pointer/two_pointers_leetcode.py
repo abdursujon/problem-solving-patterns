@@ -108,50 +108,22 @@ def maxArea(self, height: list[int]) -> int:
 
 # 881. Boats to Save People
 def numRescueBoats(self, people: list[int], limit: int) -> int:
-    if len(people) == 1 and people[0] < limit:
-        return 1
-    
-    outlier = []
-    average = []
-
-    for p in people:
-        if p > limit:
-            continue
-        if p == limit:
-            outlier.append(p)
-        if p != limit:
-            average.append(p)
-    
-    count = len(outlier)
-    
-    
-    left, right = 0, len(average) - 1
-    while left < right:
-        if average[left] + average[right] == limit:
-            count = count + 1
-            left += 1
-            right -= 1
-        
-        elif average[left] + average[right] > limit and average[left] > average[right]:
-            left+=1
-            count+=1
-        
-        elif average[left] + average[right] > limit and average[right] > average[left]:
-            right-=1
-            count+=1
-        
-        else:
-            left+=1
-            right-=1
-            count+=1
-        
-    odd = False
-    if len(average) % 2 != 0:
-        odd = True
-    if odd:
-        count += 1
-    
-    return count
+        p.sort()
+        l,r=0,len(p)-1
+        c=0
+        while l<=r:
+            if p[l]+p[r]<limit:
+                c+=1
+                l+=1
+                r-=1
+            elif p[l]+p[r]>limit:
+                c+=1
+                r-=1
+            else:
+                c+=1
+                l+=1
+                r-=1
+        return c
 
 # ===== Unidirectional traversal =====
 # --- Easy ---

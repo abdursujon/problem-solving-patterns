@@ -1,4 +1,6 @@
+from typing import List
 # ===== Inward traversal =====
+
 # --- Easy ---
 # 345. Reverse Vowels of a String
 def reverseVowels(self, s: str) -> str:
@@ -17,6 +19,7 @@ def reverseVowels(self, s: str) -> str:
         right -= 1
 
     return ''.join(letters)
+
     
 # 344. Reverse String 
 def reverseString(self, s: list[str]) -> None:
@@ -30,7 +33,8 @@ def reverseString(self, s: list[str]) -> None:
             s[left]=s[right]
             s[right] = temp
             left+=1
-            right-=
+            right-=1
+
 
 # 680. Valid Palindrome II 
 def validPalindrome(self, s: str) -> bool:
@@ -45,6 +49,7 @@ def validPalindrome(self, s: str) -> bool:
                 left+=1
                 right-=1
         return True
+
     
 # 4030. Check ASCII Palindromic
 def isPalindromic(self, s: str) -> bool:
@@ -67,6 +72,7 @@ def isPalindromic(self, s: str) -> bool:
             right-=1
     return True
 
+
 # --- Medium ---
 # 167. Two Sum II - Input Array Is Sorted
 def twoSum(self, numbers: list[int], target: int) -> list[int]:
@@ -81,6 +87,7 @@ def twoSum(self, numbers: list[int], target: int) -> list[int]:
         else:
             left += 1
     return [-1, -1]
+
 
 # 11. Container With Most Water
 def maxArea(self, height: list[int]) -> int:
@@ -107,7 +114,7 @@ def maxArea(self, height: list[int]) -> int:
 
 
 # 881. Boats to Save People
-def numRescueBoats(self, people: list[int], limit: int) -> int:
+def numRescueBoats(self, p: list[int], limit: int) -> int:
         p.sort()
         l,r=0,len(p)-1
         c=0
@@ -126,11 +133,38 @@ def numRescueBoats(self, people: list[int], limit: int) -> int:
         return c
 
 # ===== Unidirectional traversal =====
+
 # --- Easy ---
 # 283. Move Zeroes
+def shift_zeros_to_the_end(nums: List[int]) -> None:
+    left = 0
+    for right in range(1, len(nums)):
+        temp = 0
+        if nums[right] == 0:
+            continue
+        if nums[right] != 0:
+            temp = nums[right]
+            nums[right] = 0
+        
+        if nums[left] != 0:
+           left += 1
+        if nums[left] == 0:
+           nums[left] = temp
+
+
 # 392. Is Subsequence
+def isSubsequence(self, s: str, t: str) -> bool:
+    sp = tp = 0
+    while(sp < len(s) and tp < len(t)):
+        if s[sp] == t[tp]:
+            sp += 1
+        tp +=1
+    return sp == len(s)
+
+
 # 844. Backspace String Compare
-    
+
+
 # --- Medium ---
 # 80. Remove Duplicates from Sorted Array II
 # 2486. Append Characters to String to Make Subsequence

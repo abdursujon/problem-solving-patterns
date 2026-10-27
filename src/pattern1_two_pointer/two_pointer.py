@@ -81,7 +81,7 @@ def is_palindrome_valid(s: str) -> bool:
 
   return True
 
-
+# Unidirectional Traversal Two Pointer
 '''Problem 3
 Shift Zeros to the End
 Given an array of integers, modify the array in place to move all zeros to the end 
@@ -163,6 +163,8 @@ def largest_container(heights: List[int]) -> int:
             
     return max_water
 
+
+# Staged Traversal Two Pointer
 '''Problem 3
 Next Lexicographical Sequence
 Medium

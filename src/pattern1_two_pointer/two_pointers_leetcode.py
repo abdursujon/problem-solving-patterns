@@ -89,6 +89,29 @@ def twoSum(self, numbers: list[int], target: int) -> list[int]:
     return [-1, -1]
 
 
+# 15. 3Sum
+def threeSum(self, nums: list[int]) -> list[list[int]]:
+    nums.sort()
+    ans = set()
+    n = len(nums)
+
+    for i in range(n - 2):
+        left, right = i + 1, n - 1
+        
+        while left < right:
+            triplet_sum = nums[i] + nums[left] + nums[right]
+            if triplet_sum == 0:
+                ans.add((nums[i], nums[left], nums[right]))
+                left+=1
+                right-=1
+            elif triplet_sum > 0:
+                right-=1
+            else:
+                left+=1
+                
+    return list(ans)
+
+
 # 11. Container With Most Water
 def maxArea(self, height: list[int]) -> int:
     # to calculate the max water, the rule is 

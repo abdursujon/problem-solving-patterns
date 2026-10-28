@@ -45,4 +45,8 @@ class Solution:
             else:
                 b = headA
 
+            # can be written as 
+            # a = a.next if a else headB
+            # b = b.next if a else headA
+
         return a

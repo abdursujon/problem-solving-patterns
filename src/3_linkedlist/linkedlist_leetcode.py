@@ -24,14 +24,14 @@ class Solution:
 
         return dummy.next
 
-        # 83. Remove Duplicates from Sorted List
-        def deleteDuplicates(self, head: ListNode | None) -> ListNode | None:
-            current = head
-            if head == None:
-                return head
-            while current.next:
-                if current.val == current.next.val:
-                    current.next = current.next.next
-                else:
-                    current = current.next
+    # 83. Remove Duplicates from Sorted List
+    def deleteDuplicates(self, head: ListNode | None) -> ListNode | None:
+        current = head
+        if head == None:
             return head
+        while current.next:
+            if current.val == current.next.val:
+                current.next = current.next.next
+            else:
+                current = current.next
+        return head

@@ -16,7 +16,25 @@ class Solution:
         if s1 in res:
             return True
 
-        return False 
+        return False
+
+    # 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+    def numOfSubarrays(self, arr: list[int], k: int, threshold: int) -> int:
+        left = 0
+        window_sum = 0
+        count = 0
+        for right in range(len(arr)):
+            # current window sum up to right index
+            window_sum += arr[right]
+            average = window_sum / k 
+
+            # sliding window, matching length of k and moves left and updates window_sum
+            if right - left + 1 == k:
+                if average >= threshold:
+                    count+=1
+                window_sum -= arr[left]
+                left+=1
+        return count
 
 
 def main():

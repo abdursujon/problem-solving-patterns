@@ -1,4 +1,21 @@
 class Solution:
+    # 643. Maximum Average Subarray I
+    def findMaxAverage(self, nums: list[int], k: int) -> float:
+       left = 0
+       max_avg = float('-inf')
+       window_sum = 0
+       
+       if len(nums) <= k:
+        return sum(nums) / k
+
+       for right in range(len(nums)):
+        window_sum += nums[right]
+        if right - left + 1 == k:
+            curr_avg = window_sum / k
+            max_avg = max(max_avg, curr_avg)
+            window_sum-=nums[left]
+            left+=1
+       return max_avg
 
     # 576. Permutation in String
     def checkInclusion(self, s1: str, s2: str) -> bool:

@@ -1,13 +1,7 @@
 # Interview Patterns and Leetcode Problems 
-This repository follows the book "Coding Interview Patterns" by Alex Xu and Shaun Gunawardane. 
-
-Each pattern follows and covers all solutions of this book in order except those that are not needed for entry-level positions. This project can help anyone go through each pattern and see the solutions when their stuck. The book has a comprehensive online tool where you can code, but it does not have all the code in one place which you can view all solutions. 
-
-This project will allow you to explore different patterns quickly before the interview. It also covers LeetCode problems on top of the book problems.   
-
+This repository showcase leetcode problems solutions in a top down list of beginner to advance patterns.  
 
 # Patterns Covered 
-***Each Directory Contains Two Files. For example, two_pointer.py covers the book problems and two_pointer_leetcode.py covers extra leetcode problem***
 1. Two Pointer
 2. HashMap and Set
 3. LinkedList 

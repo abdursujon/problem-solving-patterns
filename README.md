@@ -2,23 +2,21 @@
 This repository showcase leetcode problems solutions in a top down list of beginner to advance patterns.  
 
 # Patterns Covered 
-1. Two Pointer
-2. HashMap and Set
-3. LinkedList 
-4. Fast and Slow Pointer 
-5. Sliding Window 
-6. Binary Search 
-7. Stack 
-8. Heaps / Top K Element 
-9. Intervals 
+1. Hash Maps and Sets
+2. Two Pointers
+3. Sliding Windows
+4. Stacks
+5. Binary Search
+6. Linked Lists
+7. Trees
+8. Sort and Search
+9. Fast and Slow Pointers
 10. Prefix Sums
-11. Trees 
-12. Graphs
-13. Backtracking 
-14. Dynamic Programming 
-15. Sort and Search 
-16. Merging  
-
+11. Intervals
+12. Merging
+13. Graphs
+14. Heaps
+15. Backtracking
 
 ## How to Approach a Problem in an Interview (6 Steps)
 1. Read the question two times, including the example case, and ask clarifying questions to the interviewer.

@@ -101,29 +101,29 @@ class Hashing:
       return True 
 
     
-    # 454. 4Sum II
-    def fourSumCount(self, nums1: list[int], nums2: list[int], nums3: list[int], nums4: list[int]) -> int:
-        pair_sum_freq = {}
-        for a in nums1:
-            for b in nums2:
-                pair_sum = a + b
-                pair_sum_freq[pair_sum] = pair_sum_freq.get(pair_sum, 0 ) + 1
-        
-        count = 0
-        for c in nums3:
-            for d in nums4:
-                needed = -(c+d)
-                count+= pair_sum_freq.get(needed, 0) # if needed found add it's value else 0
-        return count
+  # 454. 4Sum II
+  def fourSumCount(self, nums1: list[int], nums2: list[int], nums3: list[int], nums4: list[int]) -> int:
+      pair_sum_freq = {}
+      for a in nums1:
+          for b in nums2:
+              pair_sum = a + b
+              pair_sum_freq[pair_sum] = pair_sum_freq.get(pair_sum, 0 ) + 1
+      
+      count = 0
+      for c in nums3:
+          for d in nums4:
+              needed = -(c+d)
+              count+= pair_sum_freq.get(needed, 0) # if needed found add it's value else 0
+      return count
       
 
-    # 1657. Determine if Two Strings Are Close
-    def closeStrings(self, word1: str, word2: str) -> bool:
-        freq_w1 = Counter(word1)
-        freq_w2 = Counter(word2)
+  # 1657. Determine if Two Strings Are Close
+  def closeStrings(self, word1: str, word2: str) -> bool:
+      freq_w1 = Counter(word1)
+      freq_w2 = Counter(word2)
 
-        sorted_w1 = sorted(freq_w1.values())
-        sorted_w2 = sorted(freq_w2.values())
+      sorted_w1 = sorted(freq_w1.values())
+      sorted_w2 = sorted(freq_w2.values())
 
-        keys_match = freq_w1.keys() == freq_w2.keys()
-        return sorted_w1 == sorted_w2 and keys_match
+      keys_match = freq_w1.keys() == freq_w2.keys()
+      return sorted_w1 == sorted_w2 and keys_match

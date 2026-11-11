@@ -1,4 +1,17 @@
 class Hashing:
+  #================ Easy Leetcode ==================#
+  # 1. Two Sum
+  def twoSum(self, nums: list[int], target: int) -> list[int]:
+    nums_map = {}
+    for i in range(len(nums)):
+        temp = nums[i]
+        complement = target - temp
+        if complement in nums_map:
+            return [nums_map[complement], i]
+        nums_map[temp] = i
+    return [-1, -1]
+
+
   #================ Medium Leetcode ================#
   # 49. Group Anagrams
   def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
@@ -38,3 +51,19 @@ class Hashing:
                       return False
                   rows[i][num] = cols[j][num] = boxes[box_index][num] = True
       return True 
+
+    
+    # 454. 4Sum II
+    def fourSumCount(self, nums1: list[int], nums2: list[int], nums3: list[int], nums4: list[int]) -> int:
+        pair_sum_freq = {}
+        for a in nums1:
+            for b in nums2:
+                pair_sum = a + b
+                pair_sum_freq[pair_sum] = pair_sum_freq.get(pair_sum, 0 ) + 1
+        
+        count = 0
+        for c in nums3:
+            for d in nums4:
+                needed = -(c+d)
+                count+= pair_sum_freq.get(needed, 0) # if needed found add it's value else 0
+        return count

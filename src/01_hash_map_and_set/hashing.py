@@ -47,6 +47,7 @@ class Hashing:
 
     return True
 
+  
   # 205. Isomorphic Strings
   def isIsomorphic(self, s: str, t: str) -> bool:
     s_index_map, t_index_map = {}, {}
@@ -59,6 +60,12 @@ class Hashing:
             return False 
     return True 
 
+  
+  # 169. Majority Element 
+  def majorityElement(self, nums: list[int]) -> int:
+      freq = Counter(nums)
+      max_key = max(freq, key=freq.get)
+      return max_key
   
   #================ Medium Leetcode ================#
   # 49. Group Anagrams
@@ -127,3 +134,16 @@ class Hashing:
 
       keys_match = freq_w1.keys() == freq_w2.keys()
       return sorted_w1 == sorted_w2 and keys_match
+
+  
+  # 229. Majority Element II
+  def majorityElement(self, nums: list[int]) -> list[int]:
+      n = len(nums)
+      condition = n / 3 
+      res = []
+      freq = Counter(nums)
+      # if value of current key satisfy the condition add the the key to the res 
+      for k in freq.keys():
+          if freq[k] > condition:
+              res.append(k)
+      return res

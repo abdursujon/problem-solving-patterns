@@ -1,4 +1,21 @@
-class Solution:
+class ArrayProblems:
+    #============ Easy Leetcode ================#
+        def longestCommonPrefix(self, strs: list[str]) -> str:
+        if "" in strs:
+            return ""
+        n = min(len(s) for s in strs)
+        pre =""
+        for i in range(n):
+            chars = [s[i] for s in strs]
+            if all(c == chars[0] for c in chars):
+                pre+=chars[0]
+            else:
+                break 
+            
+        return pre   
+        
+        
+    #============ Medium Leetcode =============#
     # 75. Sort Colors
     def sortColors(self, nums: list[int]) -> None:
         freq = {0: 0, 1: 0, 2: 0}

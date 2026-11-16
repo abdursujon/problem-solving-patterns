@@ -1,4 +1,4 @@
-class TwoPoinerterInwardTraversal:
+class InwardTwoPointer:
   #================== Easy Leetcode ======================#
   # 125. Valid Palindrome
   def isPalindrome(self, s: str) -> bool:

@@ -1,4 +1,4 @@
-class TwoPointerInwardTraversal:
+class TwoPointerStagedTraversal:
     """
     In this approach, we traverse with one pointer, and when it lands on an 
     element that meets a certain condition, we traverse with the second pointer: 

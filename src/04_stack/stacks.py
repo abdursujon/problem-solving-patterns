@@ -17,4 +17,4 @@ class Stack:
                 elif b=='}' and top !='{':
                     return False 
             
-        return len(stack) == 
+        return len(stack) == 0
